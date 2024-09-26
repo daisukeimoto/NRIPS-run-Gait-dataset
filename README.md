@@ -12,7 +12,7 @@ Running Gait Biometrics at A Distance: A Novel Silhouette/3D Running Gait Datase
 ## Obtain NRIPS-run dataset
 To obtain and use this dataset, all users are required to complete the following steps:
 1. Send us a request to imoto@nrips.go.jp for the release agreement of the dataset.
-2. If you only require the pre-treated (rendered) silhouette dataset, you may only need to submit the release agreement. However, if you need the full dataset including 3D volume data or there are no economic security issues, basically, a collaborative research agreement* with us is required.
+2. If you only require the pre-treated (rendered) silhouette dataset, you may only need to submit the release agreement. However, if you need the full dataset including 3D volume data and so on, basically, a collaborative research agreement* with us is required.
 
 In case you encounter any issues, please feel free to reach out to us via imoto@nrips.go.jp.
 
