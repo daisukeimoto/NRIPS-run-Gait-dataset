@@ -25,6 +25,7 @@ To obtain and use this dataset, all users are required to complete at least the 
 ## Tested code
 Data in the repository are based on the OpenGait platform.
 - [OpenGait platform](https://github.com/ShiqiYu/OpenGait)
+
 Short usage instructions of training and testing by using NRIPS-run Gait Dataset are described below.
 
 ## Corresponding Author
