@@ -22,10 +22,10 @@ To obtain and use this dataset, all users are required to complete at least the 
 3. Seeking out personally identifiable information associated with the dataset is also strictly prohibited.
 4. **[IMPORTANT]**  You need to delete all the data including copied data after two years have passed from the approval.  You have to resubmit the agreement for using the data for more periods.  (Submitting the agreement is necessary for every two years.)
 
-## Recomended code
+## Tested code
 Data in the repository are based on the OpenGait platform.
-Usage instructions are listed below.
 - [OpenGait platform](https://github.com/ShiqiYu/OpenGait)
+Short usage instructions of training and testing by using NRIPS-run Gait Dataset are described below.
 
 ## Corresponding Author
 - [Daisuke Imoto (井元大輔)](https://orcid.org/0000-0002-7419-5491)
