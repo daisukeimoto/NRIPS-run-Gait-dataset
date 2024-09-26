@@ -42,10 +42,15 @@ This code is only used for **ACADEMIC PURPOSES**, anyone cannot use this dataset
 First, you need to build a python environment in advance according to the OpenGait platform.  You can then copy and replace the files in the folders in this repository, and try training and test for each method with the commands below.  The order of the methods in the commands below are GaitSet, GaitPart, GaitGL, GaitBase, DeepGaitV2, and GaitGLR(ours), respectively.
 ### Training (the same speed comparison of the normal speed: 5 km/m & the three different speed comparisons with the normal speed: 5 km/h)
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitset/gaitset_NRIPSrun.yaml --phase train
+
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitpart/gaitpart_NRIPSrun.yaml --phase train
+
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitgl/gaitgl_NRIPSrun.yaml --phase train
+
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/baseline/baseline_NRIPSrun.yaml --phase train
+
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/deepgaitv2/DeepGaitV2_NRIPSrun.yaml --phase train
+
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitglr/gaitglr_NRIPSrun.yaml --phase train
 ### Test (the three same speed comparisons other than the normal speed: 5 km/h)
 #### 3 km/h v.s. 3 km/h
