@@ -7,7 +7,7 @@ Running Gait Biometrics at A Distance: A Novel Silhouette/3D Running Gait Datase
 
 ## Highlights
 1. A novel multi-view and multi speed-mode (walking and running) silhouette/3D gait dataset processed from the treadmill silhouette sequences at four speed conditions (approximately 3, 5, 7, 9 km/h) is created.
-2. It includes both processed sequences of silhouettes and 3D human mesh data for 53 identities so as to be used for study on running gait recognition.
+2. It includes processed sequences of silhouettes from 3D human mesh data for 53 identities so as to be used for study on running gait recognition.
 
 ## Obtain NRIPS-run Gait dataset
 To obtain and use this dataset, all users are required to complete at least the two following steps:
