@@ -10,7 +10,7 @@ Running Gait Biometrics at A Distance: A Novel Silhouette/3D Running Gait Datase
 2. It includes both processed sequences of silhouettes and 3D human mesh data for 53 identities so as to be used for study on running gait recognition.
 
 ## Obtain NRIPS-run dataset
-To obtain and use this dataset, all users are required to complete the following steps:
+To obtain and use this dataset, all users are required to complete at least the two following steps:
 1. Send us a request to imoto@nrips.go.jp for the release agreement of the dataset.
 2. If you only require the pre-treated (rendered) silhouette dataset, you may only need to submit the release agreement. However, if you need the full dataset including 3D volume data, basically, a collaborative research agreement* with us is required.
 
