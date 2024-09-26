@@ -39,38 +39,33 @@ Please cite the following paper if you find this useful in your research:
 This code is only used for **ACADEMIC PURPOSES**, anyone cannot use this dataset for anything that might be considered commercial use.
 
 ## Short usage instruction
-First, you need to build a python environment in advance according to the OpenGait platform.  You can then copy and replace the files in the folders in this repository, and try training and test for each method with the commands below.  The order of the methods in the commands below are GaitSet, GaitPart, GaitGL, GaitBase, DeepGaitV2, and GaitGLR(ours), respectively.
+First, you need to build a python environment in advance according to the OpenGait platform.  You can then copy and replace the files in the folders in this repository, and try training and test for each method with the commands below.  The order of the methods in the commands below are 1 GaitSet, 2 GaitPart, 3 GaitGL, 4 GaitBase, 5 DeepGaitV2, and 6 GaitGLR(ours), respectively.
 ### Training (the same speed comparison of the normal speed: 5 km/m & the three different speed comparisons with the normal speed: 5 km/h)
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitset/gaitset_NRIPSrun.yaml --phase train
-
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitpart/gaitpart_NRIPSrun.yaml --phase train
-
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitgl/gaitgl_NRIPSrun.yaml --phase train
-
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/baseline/baseline_NRIPSrun.yaml --phase train
-
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/deepgaitv2/DeepGaitV2_NRIPSrun.yaml --phase train
-
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitglr/gaitglr_NRIPSrun.yaml --phase train
+1. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitset/gaitset_NRIPSrun.yaml --phase train
+2. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitpart/gaitpart_NRIPSrun.yaml --phase train
+3. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitgl/gaitgl_NRIPSrun.yaml --phase train
+4. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/baseline/baseline_NRIPSrun.yaml --phase train
+5. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/deepgaitv2/DeepGaitV2_NRIPSrun.yaml --phase train
+6. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitglr/gaitglr_NRIPSrun.yaml --phase train
 ### Test (the three same speed comparisons other than the normal speed: 5 km/h)
 #### 3 km/h v.s. 3 km/h
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitset/gaitset_NRIPSruntest3km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitpart/gaitpart_NRIPSruntest3km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitgl/gaitgl_NRIPSruntest3km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/baseline/baseline_NRIPSruntest3km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/deepgaitv2/DeepGaitV2_NRIPSruntest3km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitglr/gaitglr_NRIPSruntest3km.yaml --phase test
+1. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitset/gaitset_NRIPSruntest3km.yaml --phase test
+2. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitpart/gaitpart_NRIPSruntest3km.yaml --phase test
+3. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitgl/gaitgl_NRIPSruntest3km.yaml --phase test
+4. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/baseline/baseline_NRIPSruntest3km.yaml --phase test
+5. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/deepgaitv2/DeepGaitV2_NRIPSruntest3km.yaml --phase test
+6. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitglr/gaitglr_NRIPSruntest3km.yaml --phase test
 #### 7 km/h v.s. 7 km/h
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitset/gaitset_NRIPSruntest7km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitpart/gaitpart_NRIPSruntest7km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitgl/gaitgl_NRIPSruntest7km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/baseline/baseline_NRIPSruntest7km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/deepgaitv2/DeepGaitV2_NRIPSruntest7km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitglr/gaitglr_NRIPSruntest7km.yaml --phase test
+1. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitset/gaitset_NRIPSruntest7km.yaml --phase test
+2. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitpart/gaitpart_NRIPSruntest7km.yaml --phase test
+3. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitgl/gaitgl_NRIPSruntest7km.yaml --phase test
+4. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/baseline/baseline_NRIPSruntest7km.yaml --phase test
+5. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/deepgaitv2/DeepGaitV2_NRIPSruntest7km.yaml --phase test
+6. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitglr/gaitglr_NRIPSruntest7km.yaml --phase test
 #### 9 km/h v.s. 9 km/h
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitset/gaitset_NRIPSruntest9km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitpart/gaitpart_NRIPSruntest9km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitgl/gaitgl_NRIPSruntest9km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/baseline/baseline_NRIPSruntest9km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/deepgaitv2/DeepGaitV2_NRIPSruntest9km.yaml --phase test
-CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitglr/gaitglr_NRIPSruntest9km.yaml --phase test
+1. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitset/gaitset_NRIPSruntest9km.yaml --phase test
+2. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitpart/gaitpart_NRIPSruntest9km.yaml --phase test
+3. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitgl/gaitgl_NRIPSruntest9km.yaml --phase test
+4. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/baseline/baseline_NRIPSruntest9km.yaml --phase test
+5. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/deepgaitv2/DeepGaitV2_NRIPSruntest9km.yaml --phase test
+6. CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 opengait/main.py --cfgs ./configs/gaitglr/gaitglr_NRIPSruntest9km.yaml --phase test
